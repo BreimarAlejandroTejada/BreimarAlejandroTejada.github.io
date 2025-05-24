@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -47,14 +46,13 @@ a:hover {
 
 img {
     display: block;
-    margin: 25px auto; 
-    width: 100%;       
-    max-width: 600px;  
-    height: auto;     
+    margin: 25px auto;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
 }
-
 
 button.toggle-btn {
     padding: 10px 20px;
@@ -125,3 +123,63 @@ button.toggle-btn:hover {
 body {
     padding-top: 70px;
 }
+
+
+/* --- Media Queries para móviles --- */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .navbar li a {
+        font-size: 18px;
+        display: block;
+        padding: 8px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .navbar li a {
+        font-size: 16px;
+        padding: 6px 0;
+    }
+}
+
