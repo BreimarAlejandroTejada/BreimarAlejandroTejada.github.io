@@ -9,14 +9,17 @@
 </head>
 <body>
 <nav class="navbar">
-  <ul>
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#precedentes">Precedentes</a></li>
-    <li><a href="#camino">Camino a los hogares</a></li>
-    <li><a href="#modernidad">Modernidad y Futuro</a></li>
-    <li><a href="#referencias">Referencias</a></li>
-  </ul>
+  <a href="#" class="logo">Inicio</a>
+  <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+  <ul id="nav-links">
+      <li><a href="#precedentes">Precedentes</a></li>
+      <li><a href="#camino">Camino a los hogares</a></li>
+      <li><a href="#modernidad">Modernidad y Futuro</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </div>
 </nav>
+
 
 
 
@@ -94,12 +97,17 @@ A futuro, se espera que la IA avance hacia una mayor toma de decisiones. Tambié
         </div>
     </div>
     
-    <script>
-        function toggleReferences() {
-            var refSection = document.querySelector('.references');
-            refSection.style.display = (refSection.style.display === 'none' || refSection.style.display === '') ? 'block' : 'none';
-        }
-    </script>
+<script>
+  function toggleReferences() {
+    var refSection = document.querySelector('.references');
+    refSection.style.display = (refSection.style.display === 'none' || refSection.style.display === '') ? 'block' : 'none';
+  }
+
+  function toggleMenu() {
+    var menu = document.getElementById('nav-links');
+    menu.classList.toggle('show');
+  }
+</script>
 
 </body>
 </html>
